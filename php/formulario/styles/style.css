@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+}
+
+    :root{
+        --bgPrimario : #C599B6;
+        --bgSecundario : #FFF7F3; 
+        --bgTerciario : #E6B2BA;
+    }
+
+header, footer {
+    padding: 8px;
+    width: 100%;
+    background-color: var(--bgPrimario);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+body{
+    font-family: "Texturina", serif;
+    background-color: var(--bgSecundario);
+}
