@@ -1,5 +1,11 @@
 <h1>LISTA DE CARROS</h1>
 
+<a href="index.php?menu=adicionarCarros">
+    <button type="button">
+        Adicionar carro
+    </button>
+</a>
+
 <table>
     <tr>
         <th>Modelo</th>
@@ -8,12 +14,11 @@
         <th>Ano</th>
         <th>Cor</th>
     </tr>
-</table>
 
 <?php
-    $sql = "SELECT * FROM carros";
+    $sql = "SELECT * FROM modelo";
     //pedido
-    $query  = mysqli_query($conexao, $sql) or die("Erro ao listar carros".mysqli_error($conexao));
+    $query  = mysqli_query($conexao,$sql) or die("Erro ao listar carros".mysqli_error($conexao));
 
     while($dados = mysqli_fetch_assoc($query)){
         echo "<tr>";
@@ -25,3 +30,4 @@
         echo "</tr>";
     }
 ?>
+</table>

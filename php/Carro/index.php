@@ -13,7 +13,8 @@
     <header>
         <nav>
             <a href="index.php?menu=home">HOME</a>
-            <a href="index.php?menu=lista">LISTA DE CARROS</a>
+            <a href="index.php?menu=listaC">LISTA DE CARROS</a>
+            <a href="index.php?menu=adicionarCarros">ADICIONAR CARROS</a>
         </nav>
     </header>
 
@@ -29,9 +30,15 @@
                 case 'home':
                     include("pages/home/home.php");
                     break;
-                case 'home':
-                    include("pages/lista/lista.php");
-                    break;                
+                case 'listaC':
+                    include("pages/listaCarros/listaC.php");
+                    break;    
+                case 'adicionarCarros':
+                    include("pages/listaCarros/adicionarCarros.php");
+                    break; 
+                case 'dbAdicionarCarro':
+                    include("pages/listaCarros/dbAdicionarCarro.php");
+                    break;             
                 default:
                     include("pages/home/home.php");
                     break;
@@ -42,7 +49,7 @@
     </main>
 
     <footer>
-
+            <style></style>
     </footer>
 </body>
 </html>
