@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Texturina:ital,opsz,wght@0,12..72,100..900;1,12..72,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #264653;
+}
+
+body {
+    font-family:  "Texturina", serif;
+    text-align: center;
+    background-color: #d5bdaf;
+}
+
+h1 {
+    color: #264653;
+}
+
+.livros-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.livro {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.livro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+button {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
