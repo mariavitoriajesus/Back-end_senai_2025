@@ -1,6 +1,18 @@
-<h1>ADICIONAR CARROS</h1>
+<h1>EDITAR CARRO</h1>
+<?php
+    include("database/config.php");  
 
-<form action="index.php?menu=dbAdicionarCarro" method="post">
+    $id = $_GET['id'];
+    echo "esse é o carro numero: ".$id;
+
+    $sql = "SELECT * FROM modelo WHERE idModelo = '$id'";
+    $query  = mysqli_query($conexao,$sql) or die("Erro ao listar carros".mysqli_error($conexao));
+    $dados = mysqli_fetch_assoc($query);
+?>
+
+<h1>EDITAR CARROS</h1>
+
+<form action="index.php?menu=dbEditarCarros" method="post">
     <div class="form-group">
         <label for="modelo">Modelo</label>
         <input type="text" name="modelo" id="modelo" value="<?=$dados['modeloCarro']?>">

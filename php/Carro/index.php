@@ -12,9 +12,10 @@
 <body>
     <header>
         <nav>
-            <a href="index.php?menu=home">HOME</a>
+            <a href="index.php?menu=home">HOME</a> 
             <a href="index.php?menu=listaC">LISTA DE CARROS</a>
             <a href="index.php?menu=adicionarCarros">ADICIONAR CARROS</a>
+            <a href="index.php?menu=editarCarro">EDITAR CARRO</a>
         </nav>
     </header>
 
@@ -38,7 +39,13 @@
                     break; 
                 case 'dbAdicionarCarro':
                     include("pages/listaCarros/dbAdicionarCarro.php");
-                    break;             
+                    break;  
+                case 'editarCarros':
+                    include("pages/listaCarros/editarCarros.php");
+                    break;  
+                case 'dbEditarCarro':
+                    include("pages/listaCarros/dbEditarCarro.php");
+                    break;         
                 default:
                     include("pages/home/home.php");
                     break;
