@@ -21,13 +21,18 @@
     $query  = mysqli_query($conexao,$sql) or die("Erro ao listar carros".mysqli_error($conexao));
 
     while($dados = mysqli_fetch_assoc($query)){
-        echo "<tr>";
-        echo "<td>".$dados['modeloCarro']."</td>";
-        echo "<td>".$dados['marcaCarro']."</td>";
-        echo "<td>".$dados['valorCarro']."</td>";
-        echo "<td>".$dados['anoCarro']."</td>";
-        echo "<td>".$dados['corCarro']."</td>";
-        echo "</tr>";
+        ?>
+        <tr>
+            <td><?=$dados['modeloCarro']?></td>
+            <td><?=$dados['marcaCarro']?></td>
+            <td><?=$dados['valorCarro']?></td>
+            <td><?=$dados['anoCarro']?></td>
+            <td><?=$dados['corCarro']?></td>
+            <td><?=$dados['modeloCarro']?></td>
+            <td><a href="index.php?menu=editarCarros&idCarro=<?=$dados['modeloCarro']?>">EDITAR</a></td>
+            <td><a href="index.php?menu=deletarCarros&idCarro<?=$dados['modeloCarro']?>">DELETAR</a></td>
+        </tr>
+
+<?php
     }
 ?>
-</table>

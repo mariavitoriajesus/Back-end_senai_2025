@@ -45,7 +45,13 @@
                     break;  
                 case 'dbEditarCarro':
                     include("pages/listaCarros/dbEditarCarro.php");
-                    break;         
+                    break;      
+                case 'deletarCarros':
+                    include("pages/listaCarros/deletarCarros.php");
+                    break; 
+                case 'dbDeletarCarros':
+                    include("pages/listaCarros/dbDeletarCarros.php");
+                    break; 
                 default:
                     include("pages/home/home.php");
                     break;
