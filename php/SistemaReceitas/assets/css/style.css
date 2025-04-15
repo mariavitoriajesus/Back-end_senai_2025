@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap');
+
+body {
+    font-family: "Cormorant", serif;
+    background-color: #6d6875;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 714px;
+    margin: 40px auto;
+    background: #FFCDB2;
+    padding: 24px;
+    border-radius: 17px;
+    box-shadow: 0 20px 12px rgba(0, 0, 0, 0.1);
+} 
+
+h1 {
+    text-align: center;
+    margin-bottom: 28px;
+    font-size: 50px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button,
+.button-secondary {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+}
+
+.button-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.button-secondary:hover {
+    background-color: #5a6268;
+}
+
+.card {
+    background-color: #fff;
+    padding: 21px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+}
+
+.receita-passo pre {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+    border: 1px solid #ddd;
+}
+
+.receita-img {
+    max-width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: block;
+}
+
+.button-warning,
+.button-danger,
+.button-secondary {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.button-warning {
+    background-color: #ffc107;
+}
+
+.button-danger {
+    background-color: #dc3545;
+}
+
+.button-secondary {
+    background-color: #6c757d;
+}
+
+.button-warning:hover {
+    background-color: #e0a800;
+}
+
+.button-danger:hover {
+    background-color: #c82333;
+}
+
+.button-secondary:hover {
+    background-color: #5a6268;
+}
+

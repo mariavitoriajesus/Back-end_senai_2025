@@ -3,40 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Cadastrar Receita</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css"> 
 </head>
-<body class="bg-light">
+<body>
 
-<div class="container py-4">
-    <h1 class="mb-4">Cadastrar Receita</h1>
+<div class="container">
+    <h1>Cadastrar Receita</h1>
 
-    <form action="cadastrar.php" method="post" enctype="multipart/form-data" class="card p-4 bg-white shadow-sm">
-        <div class="mb-3">
-            <label class="form-label">Título</label>
-            <input name="titulo" class="form-control" required>
+    <form action="cadastrar.php" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="titulo">Título</label>
+            <input id="titulo" name="titulo" type="text" required>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Descrição</label>
-            <textarea name="descricao" class="form-control" rows="2" required></textarea>
+
+        <div class="form-group">
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao" name="descricao" rows="2" required></textarea>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Texto da Receita</label>
-            <textarea name="receitatexto" class="form-control" rows="5" required></textarea>
+
+        <div class="form-group">
+            <label for="receitatexto">Passo a Passo da Receita</label>  
+            <textarea id="receitatexto" name="receitatexto" rows="5" required></textarea>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Autor</label>
-            <input name="autor" class="form-control" required>
+
+        <div class="form-group">
+            <label for="autor">Autor</label>
+            <input id="autor" name="autor" type="text" required>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Tipo (Doce/Salgado)</label>
-            <input name="tipo_receita" class="form-control">
+
+        <div class="form-group">
+            <label for="tipo_receita">Tipo (Doce/Salgado)</label>
+            <input id="tipo_receita" name="tipo_receita" type="text">
         </div>
-        <div class="mb-3">
-            <label class="form-label">Imagem</label>
-            <input type="file" name="imagem" class="form-control">
+
+        <div class="form-group">
+            <label for="imagem">Imagem</label>
+            <input id="imagem" type="file" name="imagem">
         </div>
-        <button type="submit" class="btn btn-primary">Cadastrar</button>
-        <a href="../index.php" class="btn btn-secondary">Voltar</a>
+
+        <div class="form-actions">
+            <button type="submit">Cadastrar</button>
+            <a href="../index.php" class="button-secondary">Voltar</a>
+        </div>
     </form>
 </div>
 

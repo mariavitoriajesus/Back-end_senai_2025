@@ -10,29 +10,23 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Receitas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="bg-light">
+<body>
 
-<div class="container py-4">
-    <h1 class="mb-4">Receitas</h1>
+<div class="container">
+    <h1>Receitas Cadastradas</h1>
 
-    <div class="mb-3">
-        <a href="?tipo=Doce" class="btn btn-outline-primary btn-sm">Doces</a>
-        <a href="?tipo=Salgado" class="btn btn-outline-secondary btn-sm">Salgados</a>
-        <a href="index.php" class="btn btn-outline-dark btn-sm">Todas</a>
-        <a href="pages/formulario.php" class="btn btn-success btn-sm float-end">Nova Receita</a>
+    <div class="form-actions">
+        <a href="paginas/formulario.php" class="button-secondary">Cadastrar Nova Receita</a>
     </div>
 
-    <?php while ($row = $result->fetch_assoc()): ?>
-        <div class="card mb-3">
-            <div class="card-body">
-                <h4 class="card-title">
-                    <a href="pages/receita.php?id=<?= $row['id'] ?>">Ver Receita</a>
-                </h4>
-                <p class="card-text"><?= $row['descricao'] ?></p>
-                <span class="badge bg-info"><?= $row['tipo_receita'] ?></span>
-            </div>
+    <?php while ($r = $result->fetch_assoc()): ?>
+        <div class="card">
+            <h2><?= $r['titulo'] ?></h2>
+            <p><?= $r['descricao'] ?></p>
+            <p class="info">Autor: <?= $r['autor'] ?> | Tipo: <?= $r['tipo_receita'] ?></p>
+            <a href="paginas/visualizar.php?id=<?= $r['id'] ?>" class="button-secondary">Ver Receita</a>
         </div>
     <?php endwhile; ?>
 </div>
